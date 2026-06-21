@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28圈 · 一处安静的聚集地</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            background-color: #faf8f5;
+            color: #2e2b27;
+            line-height: 1.8;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 780px;
+            width: 100%;
+            background: rgba(255, 252, 248, 0.7);
+            backdrop-filter: blur(2px);
+            padding: 2.5rem 2.2rem;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.08);
+            margin-top: 1rem;
+            border: 1px solid #ede8e0;
+        }
+        @media (max-width: 540px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+                border-radius: 20px;
+            }
+        }
+
+        /* 开场短句 — 轻声引入 */
+        .opening {
+            font-size: 1.25rem;
+            letter-spacing: 0.03em;
+            color: #5b5249;
+            border-left: 4px solid #cdbcab;
+            padding-left: 1.2rem;
+            margin-bottom: 1.8rem;
+            font-style: italic;
+        }
+
+        /* 正文段落 */
+        p {
+            margin-bottom: 1.5rem;
+            text-indent: 2em;
+            font-size: 1.05rem;
+        }
+        p.no-indent {
+            text-indent: 0;
+        }
+
+        /* 特点列表 — 用温和的引用框风格 */
+        .feature-note {
+            background-color: #f3efe9;
+            border-radius: 20px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0 2.2rem 0;
+            border-left: 5px solid #b7a995;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+        .feature-note ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-note li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.9rem;
+            font-size: 1.02rem;
+            line-height: 1.7;
+        }
+        .feature-note li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #8f7c69;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        .feature-note li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 引用块 / 提示框 — 像一张温和的便签 */
+        .gentle-tip {
+            background: #f2ede6;
+            padding: 1.4rem 1.6rem;
+            border-radius: 32px 12px 32px 12px;
+            margin: 2rem 0 1.8rem 0;
+            font-size: 0.98rem;
+            color: #3d3732;
+            border: 1px solid #e1d7cc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .gentle-tip strong {
+            color: #6b5d50;
+            font-weight: 600;
+        }
+
+        /* 链接 — 融入句子，不刻意 */
+        a {
+            color: #6b5d50;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9ab9b;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        a:hover {
+            color: #3d322b;
+            border-bottom: 1px solid #6b5d50;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e6ddd2;
+            text-align: center;
+            font-size: 1rem;
+            color: #6d6359;
+        }
+        .closing em {
+            font-style: italic;
+            color: #534b43;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e6ddd2;
+            margin: 1.8rem 0;
+        }
+
+        /* 小字辅助 */
+        .meta-note {
+            font-size: 0.9rem;
+            color: #958b7f;
+            text-align: right;
+            margin-top: 0.3rem;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 480px) {
+            .opening {
+                font-size: 1.1rem;
+                padding-left: 0.9rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .feature-note {
+                padding: 1.2rem 1.2rem;
+            }
+            .gentle-tip {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- 开场短句 -->
+        <div class="opening">
+            有些站点，不喧哗，却自有它的脉络。
+        </div>
+
+        <!-- 承接段落 —— 从介绍与可信说明的角度 -->
+        <p>
+            如果你偶然走到这里，也许会好奇「<a href="https://cn28--circle.com">28圈</a>」究竟是什么。它不是一个被聚光灯追逐的名字，也没有铺天盖地的口号。它更像一座安静的走廊，连接着一些对信息与交流有朴素需求的人。站点本身保持着一贯的低调，但访问过的人会发现，它的存在并非为了追赶什么，而是提供一种持续的、可回访的落脚点。
+        </p>
+
+        <p>
+            很多人在初次接触一个陌生站点时，会下意识地确认它的可信度与持续性。<a href="https://cn28--circle.com">28圈</a> 并非来去匆匆的临时页面，它有着相对清晰的定位和一贯的内容基调。从页面结构到信息组织，都透露着一种“被认真对待过”的痕迹。不浮夸、不诱导，只是安静地呈现它想呈现的东西。
+        </p>
+
+        <!-- 特点列表 —— 以引用框包裹，更温和 -->
+        <div class="feature-note">
+            <ul>
+                <li>内容方向稳定，不追逐热点，有自己的更新节奏。</li>
+                <li>界面干净克制，没有弹窗或冗余装饰，阅读体验比较舒适。</li>
+                <li>访问路径直接，不设置多余的跳转或障碍，信息可及性高。</li>
+                <li>长期在线，适合作为日常浏览中一个安静的参考坐标。</li>
+            </ul>
+        </div>
+
+        <p>
+            当然，每个站点都有自己的语境。如果你愿意花几分钟随便逛逛，或许会发现它与其他同类地方的不同之处——不是功能上的标新立异，而是一种氛围上的差异：不急，不挤，不制造焦虑。就像走进一家开在街角多年的旧书店，你不知道会遇见什么，但你知道它一直在那里。
+        </p>
+
+        <!-- 提示框 —— 类似 FAQ 摘要的温和提醒 -->
+        <div class="gentle-tip">
+            <strong>一点提示：</strong> 如果你正在寻找一个不那么嘈杂的信息角落，不妨把 <a href="https://cn28--circle.com">28圈</a> 加入你的书签夹。它不需要你注册或留下任何东西，你只需在需要的时候打开它。有时候，一个可靠的地址比什么都重要。
+        </div>
+
+        <p>
+            网络世界里，太多站点试图用闪烁的按钮和紧迫的倒计时留住访客。而在这里，你几乎感受不到那种“必须做点什么”的压力。一切都是自愿的、从容的。也正是这种克制，让它在不知不觉中积累了一种独特的分量。
+        </p>
+
+        <!-- 温和结尾 -->
+        <div class="closing">
+            <em>—— 一个安静得刚刚好的角落，等你来发现。</em>
+            <div class="meta-note">· 写在初秋 ·</div>
+        </div>
+
+    </div>
+</body>
+</html>
