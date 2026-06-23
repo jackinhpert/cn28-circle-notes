@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>读懂乐鱼 · 一份站点说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(145deg, #fce7c8 0%, #f8d5b3 55%, #f3c7a0 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.2rem;
+      line-height: 1.7;
+      color: #2e241f;
+    }
+
+    .card {
+      max-width: 760px;
+      width: 100%;
+      background: #fffcf7;
+      border-radius: 36px;
+      box-shadow: 0 20px 40px -12px rgba(120, 70, 40, 0.25), 0 8px 16px -6px rgba(0, 0, 0, 0.05);
+      padding: 2.8rem 2.5rem;
+      backdrop-filter: blur(2px);
+      transition: all 0.2s ease;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1.8rem 1.3rem;
+        border-radius: 28px;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 510;
+      letter-spacing: -0.01em;
+      color: #4c2f20;
+      margin-bottom: 0.15rem;
+      line-height: 1.2;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7a5c47;
+      border-left: 4px solid #dba980;
+      padding-left: 1rem;
+      margin: 0.6rem 0 1.8rem 0;
+      font-weight: 380;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      word-break: break-word;
+    }
+
+    a {
+      color: #ad6d44;
+      text-decoration: none;
+      font-weight: 470;
+      border-bottom: 2px solid rgba(173, 109, 68, 0.2);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #7f4e2d;
+      border-bottom-color: #7f4e2d;
+    }
+
+    .inset-quote {
+      background: #f7efe7;
+      border-radius: 24px;
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0 1.8rem 0;
+      border-left: 6px solid #d99b6a;
+      font-style: normal;
+      color: #3e2d23;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .inset-quote p {
+      margin-bottom: 0.4rem;
+    }
+
+    .inset-quote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inset-quote .small-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: #d9b699;
+      color: #2d1f17;
+      padding: 0.15rem 0.9rem;
+      border-radius: 40px;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.8rem;
+      margin: 1.6rem 0 1.2rem 0;
+    }
+
+    .feature-item {
+      flex: 1 1 160px;
+      background: #f9f2ea;
+      border-radius: 40px;
+      padding: 0.7rem 1.2rem;
+      font-size: 0.95rem;
+      color: #382b22;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .feature-item::before {
+      content: "·";
+      font-weight: 700;
+      margin-right: 0.5rem;
+      color: #b57c55;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .faq-mini {
+      background: #fdf9f4;
+      border-radius: 28px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.8rem 0 1rem 0;
+      border: 1px solid #ecdccc;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-mini details:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-mini summary {
+      font-weight: 470;
+      cursor: pointer;
+      padding: 0.3rem 0;
+      color: #5f3f2c;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-mini summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-mini summary::before {
+      content: "▹";
+      color: #b57c55;
+      margin-right: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    .faq-mini details[open] summary::before {
+      content: "▿";
+    }
+
+    .faq-mini .answer {
+      padding: 0.4rem 0 0.2rem 1.6rem;
+      color: #4a382d;
+      font-size: 0.95rem;
+    }
+
+    .closing-line {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e8d6c8;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .closing-line span {
+      color: #7f624b;
+    }
+
+    .closing-line .sig {
+      font-size: 0.9rem;
+      background: #ede2d7;
+      padding: 0.15rem 1rem;
+      border-radius: 60px;
+      color: #4a3427;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .inset-quote {
+        padding: 1rem 1.2rem;
+      }
+      .faq-mini {
+        padding: 0.8rem 1rem;
+      }
+      .feature-grid {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .feature-item {
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>关于乐鱼</h1>
+    <div class="subhead">一份站点说明 · 温和而清晰</div>
+
+    <p>
+      初次来到这个页面，你或许会好奇：<strong>乐鱼</strong> 究竟是什么？它并非一个喧闹的广告牌，也不是一个急切的邀请函。它只是一个安静的站点——专注于提供移动端信息索引与访问路径的简洁工具。我们在这里尝试用最朴素的界面，把一些有用的连接整理好，供你按需翻阅。
+    </p>
+
+    <p>
+      也许你是在寻找某些服务时偶然发现了这里，又或者想了解一个更轻量的入口。无论出于什么原因，你都可以把 <a href="https://index-mobile-leyu.com">乐鱼</a> 看作一个干净的中转台：没有弹窗轰炸，没有夸张承诺，只有必要的导航和说明。我们希望保持这种干净，也相信它值得被信任。
+    </p>
+
+    <div class="inset-quote">
+      <span class="small-label">引 · 说明初衷</span>
+      <p>“很多时候我们并不需要又一个喧哗的平台，只需要一个可以安静抵达目的地的索引牌。乐鱼就是这样的存在——不标榜万能，只做好一件事：让访问本身变得简单可靠。”</p>
+    </div>
+
+    <p>
+      移动互联网的入口越来越多，但并非每个都清澈透明。<strong>乐鱼</strong> 在筛选与整理时额外注意了可信度与稳定性，链接均经过基础校验，避免导向不明确或频繁失效的地址。当然，任何索引都无法保证百分之百的永久有效，我们也会持续维护。
+    </p>
+
+    <div class="feature-grid">
+      <span class="feature-item">轻量索引，无冗余装饰</span>
+      <span class="feature-item">移动优先，响应适配</span>
+      <span class="feature-item">定期检查，剔除失效链接</span>
+      <span class="feature-item">无追踪脚本，保护基本隐私</span>
+    </div>
+
+    <p>
+      很多朋友会问：这个站点和普通的导航页有什么不同？其实差别不大，只不过我们更愿意把精力放在“持续可用”上，而不是堆砌花哨的视觉。每一个栏目都经过人工确认，每一个跳转都尽量保持直接。无论是找资源、查信息还是简单浏览，你都可以在这里获得一个平静的起点。
+    </p>
+
+    <div class="faq-mini">
+      <details>
+        <summary>乐鱼的链接安全吗？</summary>
+        <div class="answer">我们会对收录的链接进行基础验证，移除明显可疑或失效的条目。但作为索引页，建议你在访问任何第三方站点时也留意自身设备安全。</div>
+      </details>
+      <details>
+        <summary>需要注册或登录才能使用吗？</summary>
+        <div class="answer">完全不需要。乐鱼是一个开放的索引页面，没有任何用户系统或收费门槛，打开即用。</div>
+      </details>
+      <details>
+        <summary>页面内容多久更新一次？</summary>
+        <div class="answer">通常每隔几周会做一次全检，并在发现链接异常时尽快调整。你也可以通过站点内预留的方式反馈问题。</div>
+      </details>
+    </div>
+
+    <p>
+      如果你愿意进一步了解，可以直接在浏览器中打开 <a href="https://index-mobile-leyu.com">乐鱼</a>，看看它的界面与组织方式是否符合你的习惯。我们不希望你带着过高的期待来，而是带着一份“刚刚好”的舒适感离开。
+    </p>
+
+    <div class="closing-line">
+      <span>阅读愉快，访问顺利</span>
+      <span class="sig">乐鱼 · 索引说明</span>
+    </div>
+  </div>
+</body>
+</html>
