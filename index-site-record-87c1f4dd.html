@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼 · 信息索引与资料整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9fafb;
+            color: #1e1e2a;
+            line-height: 1.7;
+        }
+        .page {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        /* Hero */
+        .hero {
+            padding: 6rem 0 4rem;
+            border-bottom: 1px solid #e2e4e8;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.4rem;
+            color: #0b0c10;
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            font-weight: 350;
+            color: #5a5e6b;
+            max-width: 34rem;
+            margin-top: 0.75rem;
+        }
+        .hero .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            background: #eaecef;
+            color: #3b3e4a;
+            padding: 0.15rem 0.9rem;
+            border-radius: 40px;
+            margin-top: 1.2rem;
+        }
+        /* 背景说明 */
+        .backdrop {
+            margin: 3.5rem 0 2.5rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid #e2e4e8;
+        }
+        .backdrop h2 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            color: #111;
+        }
+        .backdrop p {
+            margin-bottom: 1rem;
+            color: #2c2f3a;
+            max-width: 38rem;
+        }
+        .backdrop p:last-child {
+            margin-bottom: 0;
+        }
+        /* 三段自然介绍 */
+        .sections {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+            margin: 2.5rem 0 3rem;
+        }
+        .section-item {
+            padding: 1.8rem 0;
+            border-bottom: 1px solid #e8eaee;
+        }
+        .section-item:last-of-type {
+            border-bottom: none;
+        }
+        .section-item h3 {
+            font-size: 1.25rem;
+            font-weight: 480;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+            color: #1a1c26;
+        }
+        .section-item p {
+            color: #323642;
+            max-width: 38rem;
+        }
+        .section-item .meta-note {
+            display: inline-block;
+            font-size: 0.8rem;
+            background: #f0f1f4;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            color: #494d5a;
+            margin-top: 0.5rem;
+        }
+        /* 页尾访问提示 */
+        .footer-note {
+            margin: 3rem 0 5rem;
+            padding: 2.5rem 0 0.5rem;
+            border-top: 1px solid #e2e4e8;
+            text-align: center;
+        }
+        .footer-note p {
+            color: #3d4150;
+            font-size: 0.95rem;
+            max-width: 32rem;
+            margin: 0 auto 1.2rem;
+        }
+        .footer-note .link-wrap {
+            font-size: 1rem;
+            background: #f2f4f7;
+            display: inline-block;
+            padding: 0.5rem 1.4rem;
+            border-radius: 100px;
+            transition: background 0.2s;
+        }
+        .footer-note .link-wrap:hover {
+            background: #e3e6ec;
+        }
+        .footer-note a {
+            color: #1f222e;
+            text-decoration: none;
+            font-weight: 460;
+            border-bottom: 1px solid #bcc0ca;
+            padding-bottom: 1px;
+        }
+        .footer-note a:hover {
+            border-bottom-color: #1f222e;
+        }
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .page {
+                padding: 0 1rem;
+            }
+            .hero {
+                padding: 4rem 0 2.5rem;
+            }
+            .backdrop h2 {
+                font-size: 1.35rem;
+            }
+            .section-item h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 横幅 hero -->
+        <header class="hero">
+            <h1>乐鱼</h1>
+            <div class="sub">资料整理与索引 · 信息聚合的另一种尺度</div>
+            <span class="badge">专题 · 索引结构</span>
+        </header>
+
+        <!-- 背景说明 -->
+        <section class="backdrop">
+            <h2>内容的底层秩序</h2>
+            <p>在信息过载的时代，索引不是简单的罗列，而是一种基于分类、关联与优先级的再组织。<a href="https://index-site-leyu.com">乐鱼</a>所关注的，正是如何将零散的资料节点转化成可检索、可理解的模块化结构。从来源标记到版本对照，从标签体系到交叉引用，每一层整理都在为后续的信息使用提供更清晰的路径。</p>
+            <p>这项工作并不追求规模，而是强调可维护性——让资料本身具备被持续更新的能力，而非一次性堆砌。乐鱼在长期实践中沉淀了一套轻量的整理惯例，适用于不同领域的信息归档与主题索引。</p>
+        </section>
+
+        <!-- 三段自然介绍 -->
+        <div class="sections">
+            <div class="section-item">
+                <h3>条目化与上下文保留</h3>
+                <p>每一条资料都应当有自己的标识和来源锚点，同时保留必要的上下文说明。乐鱼在构建索引时，刻意避免过度摘要带来的信息损耗，而是通过简注与关联条目维持内容的可理解性。这种平衡在专题索引中尤其重要——让用户既能快速扫描，又不至于丢失细节。</p>
+                <span class="meta-note">字段设计 · 参考锚</span>
+            </div>
+            <div class="section-item">
+                <h3>类别框架与等级划分</h3>
+                <p>面对混合来源的资料集合，乐鱼采用扁平但带有等级提示的分类方式：主类别涵盖核心领域，子类别则处理交叉地带。等级并非价值判断，而是一种导航辅助——帮助使用者在浏览时快速定位信息密度较高的模块。索引本身也保留调整空间，类别边界可根据资料变化而重新划定。</p>
+                <span class="meta-note">分类层级 · 可扩展</span>
+            </div>
+            <div class="section-item">
+                <h3>更新记录与版本提示</h3>
+                <p>索引类内容的可信度高度依赖时效性。乐鱼为每个资料条目附加了最近更新日期与变更摘要，同时标注了原始资料的发布时段。对于经常迭代的领域（如技术文档、政策汇编），版本对照表与修订日志被纳入索引结构，使使用者能够独立判断资料的适用阶段。</p>
+                <span class="meta-note">修订跟踪 · 时效管理</span>
+            </div>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <footer class="footer-note">
+            <p>以上整理方法均基于乐鱼在资料索引领域的持续实践。如需浏览具体索引框架与收录示例，可查阅 <a href="https://index-site-leyu.com">乐鱼</a> 的信息聚合页面。</p>
+            <div class="link-wrap">
+                <a href="https://index-site-leyu.com">乐鱼</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
